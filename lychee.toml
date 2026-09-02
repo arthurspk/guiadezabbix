@@ -1,0 +1,10 @@
+# Configuração do verificador de links (https://github.com/lycheeverse/lychee)
+# Uso: lychee --no-progress './**/*.md'
+#
+# O LinkedIn responde HTTP 999 a qualquer verificador automatizado (bloqueio anti-bot),
+# mesmo com o perfil no ar.
+# O fórum oficial do Zabbix (zabbix.com/forum) responde HTTP 403 a qualquer requisição
+# automatizada (Cloudflare), embora o domínio raiz zabbix.com e as demais páginas do
+# site verifiquem normalmente com HTTP 200 — confirmando que é um bloqueio anti-bot, não
+# um recurso fora do ar.
+exclude = ["^https://www\\.linkedin\\.com/", "^https://www\\.zabbix\\.com/forum"]
